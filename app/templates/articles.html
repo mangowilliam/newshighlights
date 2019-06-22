@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+<!-- Content block -->
+{% block content %}
+<div class="container">
+
+    <!-- Poster background -->
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 urlToImage" style="background: url({{article.urlToImage}}) no-repeat center center">
+        </div>
+
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 movie-details">
+            <h3>{{ articles.title }}</h3>
+
+            <p class="description"> {{ articles.description }}</p>
+            <p class="publishedAt">{{ articles.publishedAt }}</p>
+
+
+        </div>
+    </div>
+
+</div>
+{% endblock %}

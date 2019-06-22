@@ -3,7 +3,7 @@
     {% for source in source_list %}
     <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 movie-card">
             <p class="text-center">
-                <a href="">
+                <a href="/articles/{{articles.name}}">
                     {{ source.name|truncate(20)}}</a>
             </p>
             <p class="text-center">{{ source.category|truncate(15)}}</p>
