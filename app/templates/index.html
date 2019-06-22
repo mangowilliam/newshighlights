@@ -11,5 +11,12 @@
     </head>
     <body>
         <h1> NEWS HIGHLIGHTS </h1>
+        <!-- sources -->
+         <h3> sources</h3>
+         <ul>
+            {% for sources in sources %}
+                <li>{{ sources.name}}</li>
+            {% endfor %}
+        </ul>
     </body>
 </html>
