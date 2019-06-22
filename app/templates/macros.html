@@ -1,7 +1,13 @@
 {% macro displaySourceList(source_list) %}
 
     {% for source in source_list %}
-        <l>{{ source.name}}</l>
+    <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 movie-card">
+            <p class="text-center">
+                <a href="">
+                    {{ source.name|truncate(10)}}</a>
+            </p>
+        </div>
+
     {% endfor %}
 
 {% endmacro %}

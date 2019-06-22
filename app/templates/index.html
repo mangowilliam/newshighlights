@@ -13,12 +13,16 @@
     <body>
         <!-- Content block -->
         {% block content %}
-        <h1> NEWS HIGHLIGHTS </h1>
-        <!-- sources -->
-        <h3> sources</h3>
-        <ul>
-            {{ macro.displaySourceList(sources)}}
-        </ul>
+        <center><h1> NEWS HIGHLIGHTS </h1></center>
+        <div class ="container">
+            <div class ="row>"
+                <!-- sources -->
+                <p>
+                {{ macro.displaySourceList(sources)}}
+                </p>
+            </div>
+        </div>
+
         {% endblock%}
     </body>
 </html>
