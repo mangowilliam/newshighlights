@@ -10,3 +10,4 @@ class Article:
         self.description = description
         self.url = url
         self.urlToImage = urlToImage
+        self.publishedAt=publishedAt

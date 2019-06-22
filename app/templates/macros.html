@@ -4,8 +4,12 @@
     <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 movie-card">
             <p class="text-center">
                 <a href="">
-                    {{ source.name|truncate(10)}}</a>
+                    {{ source.name|truncate(20)}}</a>
             </p>
+            <p class="text-center">{{ source.category|truncate(15)}}</p>
+            <p class="text-center">{{ source.country|truncate(15)}}  <p>
+            <p class="text-center">{{ source.description|truncate(50)}}</p>
+           
         </div>
 
     {% endfor %}

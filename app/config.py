@@ -4,6 +4,7 @@ class Config:
     '''
     
     SOURCE_API_BASE_URL ='https://newsapi.org/v1/{}?api_key={}'
+    article_api_base_url ="'https://newsapi.org/v2/top-headlines?sources={}&apiKey={}'"
 
 
 
