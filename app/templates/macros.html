@@ -1,0 +1,7 @@
+{% macro displaySourceList(source_list) %}
+
+    {% for source in source_list %}
+        <l>{{ source.name}}</l>
+    {% endfor %}
+
+{% endmacro %}
