@@ -1,9 +1,9 @@
-from flask import render_template,request,redirect
-from app import app
-from .request import get_sources,get_articles
+from flask import render_template,request,redirect,url_for
+from ..request import get_sources,get_articles
+from . import main
 
 # Views
-@app.route('/')
+@main.route('/')
 def index():
 
     '''
@@ -14,7 +14,7 @@ def index():
     title = "Home - All news around the globe"
     return render_template('index.html', title = title,sources=news_sources)
 
-@app.route('/articles/<source_name>')
+@main.route('/articles/<source_name>')
 def articles(source_name):
 
     '''
