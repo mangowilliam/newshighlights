@@ -1,15 +1,23 @@
-from app import app
-import urllib.request,json
-from .models import source
-from .models import articles
 
-Source = source.Source
-Article =articles.Article
+import urllib.request,json
+from .source import Source
+from .articles import Article
+
 # Getting api key
-api_key = app.config['SOURCE_API_KEY']
+api_key = None
+# Getting the movie base url
+base_url = None
+base1_url=None
+
+def configure_request(app):
+    global api_key,base_url,base1_url
+    api_key = app.config['SOURCE_API_KEY']
+    base_url = app.config["SOURCE_API_BASE_URL"]
+    base1_url = app.config["ARTICLE_API_BASE_URL"]
+# Getting api key
+
 # Getting the base urls
-base_url = app.config["SOURCE_API_BASE_URL"]
-base1_url = app.config["ARTICLE_API_BASE_URL"]
+
 
 def get_sources(sources):
     '''
