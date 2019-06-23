@@ -1,16 +1,12 @@
 body {
-  margin: 0;
-  padding: 0;
-  background-color: greenyellow;
+ 
+  background-image: url('news.jpg');
 }
 h1{
   color: blue;
 
 }
 
-#body{
-  background-image: url('news.jpg');
-}
 @media (min-width: 768px) {
   .container {
     width: 750px;

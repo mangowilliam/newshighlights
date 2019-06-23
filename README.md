@@ -1,4 +1,4 @@
-# NEWS HIHLIGHTS
+# NEWS HIGHLIGHTS
 This is a Python application that allows a user to view news sources and highlights around the world.
 
 ## BY William Mango https://github.com/mangowilliam/
@@ -22,14 +22,14 @@ by clicking on the image of the highlight the user can read the news on the webs
 ## Prerequisites
 * Python3.6
 ## Setup/Installation Requirements
-internet access
-git clone https://github.com/mangowilliam/Password.git
-$ cd news-highlights
-$ python3.6 -m venv virtual (install virtual environment)
-$ source virtual/bin/activate
-$ python3.6 -m pip install -r requirements.txt (install all dependencies)
-Inside the manage.py module change the config_name parameter from 'production' to 'development' ie app = create_app('production') should be app = create_app('development')
-$ ./start.sh
+* internet access
+* git clone https://github.com/mangowilliam/Password.git
+* $ cd news-highlights
+* $ python3.6 -m venv virtual (install virtual environment)
+* $ source virtual/bin/activate
+* $ python3.6 -m pip install -r requirements.txt (install all dependencies)
+* Inside the manage.py module change the config_name parameter from 'production' to 'development' ie app = * create_app('production') should be app = create_app('development')
+* $ ./start.sh
 ## Known Bugs
 
 No known bugs
