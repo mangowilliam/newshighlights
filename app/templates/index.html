@@ -2,31 +2,34 @@
 {% import 'macros.html' as macro%}
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        {% if title %}
-        <title> {{ title }}</title>
-        {% else %}
-        <title> all news around the globe </title>
-        {% endif %}
-    </head>
-    <body>
-            {% block styles%}
-            {{ super() }}
-            <link rel="stylesheet" href="{{url_for('static',filename='/css/index.css')}}">
-        {% endblock %}
-        <!-- Content block -->
-        {% block content %}
-        <div class ="container">
-                <center><h1>BEST-NEWS SOURCES AROUND THE GLOBE </h1></center>
-            <div class ="row>"
-                <!-- sources -->
-                <p>
-                {{ macro.displaySourceList(sources)}}
-                </p>
-            </div>
-        </div>
 
-        {% endblock%}
-    </body>
+<head>
+  <meta charset="utf-8">
+  
+  {% if title %}
+  <title> {{ title }}</title>
+  {% else %}
+  <title> all news around the globe </title>
+  {% endif %}
+</head>
+
+<body>
+  {% block styles%}
+  {{ super() }}
+  <link rel="stylesheet"type= "text/css" href="{{url_for('static',filename='css/styles.css')}}">
+  {% endblock %}
+  <!-- Content block -->
+  {% block content %}
+  <div class="container"id ="bg">
+      <center><h1>BEST-NEWS SOURCES AROUND THE GLOBE </h1></center>
+    <div class="row1">
+      <p>
+        {{ macro.displaySourceList(sources)}}
+      </p>
+    </div>
+  </div>
+
+  {% endblock%}
+</body>
+
 </html>

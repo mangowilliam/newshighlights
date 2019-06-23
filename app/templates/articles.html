@@ -10,8 +10,13 @@
         {% else %}
         <title> all news around the globe </title>
         {% endif %}
+       
     </head>
     <body>
+            {% block styles%}
+            {{ super() }}
+            <link rel="stylesheet"type= "text/css" href="{{url_for('static',filename='css/styles.css')}}">
+            {% endblock %}
        <!-- Content block -->
         {% block content %}
         <center><h1> TOP-HIGHLIGHTS </h1></center>
