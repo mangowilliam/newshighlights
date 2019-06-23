@@ -3,7 +3,7 @@
     {% for source in source_list %}
     <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 movie-card">
             <p class="text-center">
-                <a href="/articles/{{articles.name}}">
+                <a href="/articles/{{source.id}}">
                     {{ source.name|truncate(20)}}</a>
             </p>
             <p class="text-center">{{ source.category|truncate(15)}}</p>
@@ -11,6 +11,19 @@
             <p class="text-center">{{ source.description|truncate(50)}}</p>
            
         </div>
+
+    {% endfor %}
+
+{% endmacro %}
+{% macro displayArticleList(article_list) %}
+    {% for article in article_list %}
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-">
+              <p class="text-center">
+                  <a href="{{articles.url}}"style="text-decoration:none;">
+                    {{ articles.url|truncate(20)}}
+              </p>
+      </div>
+
 
     {% endfor %}
 

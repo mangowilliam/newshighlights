@@ -1,4 +1,4 @@
-from flask import render_template
+from flask import render_template,request,redirect
 from app import app
 from .request import get_sources,get_articles
 
@@ -14,12 +14,13 @@ def index():
     title = "Home - All news around the globe"
     return render_template('index.html', title = title,sources=news_sources)
 
-@app.route('/article/<source_name>')
+@app.route('/articles/<source_name>')
 def articles(source_name):
 
     '''
     View movie page function that returns the movie details page and its data
     '''
+    title= f"{source_name}"
     articles = get_articles(source_name)
-    title = f'{source_name}'
-    return render_template('article.html',articles = articles,title=title)
+  
+    return render_template('articles.html',source_name=articles,title=title)

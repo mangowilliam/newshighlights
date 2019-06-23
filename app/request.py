@@ -9,7 +9,7 @@ Article =articles.Article
 api_key = app.config['SOURCE_API_KEY']
 # Getting the base urls
 base_url = app.config["SOURCE_API_BASE_URL"]
-base1_url = app.config["article_api_base_url "]
+base1_url = app.config["ARTICLE_API_BASE_URL"]
 
 def get_sources(sources):
     '''
@@ -49,18 +49,17 @@ def process_results(sources_list):
         description = source_item.get('description')
         category = source_item.get('category')
         url= source_item.get("url")
-        if name:
-            source_object = Source(id,name,country, description,category,url)
-            source_results.append(source_object)
+        source_object = Source(id,name,country, description,category,url)
+        source_results.append(source_object)
 
     return source_results
 
 
-def get_articles(name):
+def get_articles(id):
     '''
     Function that gets the json response to our url request
     '''
-    get_articles_url = base1_url.format(name,api_key)
+    get_articles_url = base1_url.format(id,api_key)
 
     with urllib.request.urlopen(get_articles_url) as url:
         get_articles_data = url.read()
@@ -68,8 +67,8 @@ def get_articles(name):
 
         articles_results = None
 
-        if get_articles_response['name']:
-            articles_results_list = get_articles_response['name']
+        if get_articles_response['articles']:
+            articles_results_list = get_articles_response['articles']
             articles_results = process_articles(articles_results_list)
 
 
@@ -96,29 +95,9 @@ def process_articles(articles_list):
         url =article_item.get('url')
         urlToImage = article_item.get('urlToImage')
         publishedAt = article_item.get('publishedAt')
-        if name:
+        if urlToImage:
             articles_object = Article(id,name,title, description,url,urlToImage,publishedAt)
             articles_results.append(articles_object)
 
     return articles_results
 
-'''def get_articles(id):
-    get_article_details_url = base_url.format(id,api_key)
-
-    with urllib.request.urlopen(get_article_details_url) as url:
-        article_details_data = url.read()
-        article_details_response = json.loads(article_details_data)
-
-        artcle_object = None
-        if article_details_response:
-            id = article_details_response.get('id')
-            name=article_details_response.get("name")
-            title = artticle_details_response.get('title')
-            description = article_details_response.get('description')
-            url = movie_details_response.get('url')
-            urlToImage = movie_details_response.get('urlToImage')
-            publishedAt = movie_details_response.get('publishedAt')
-
-            article_object = Article(id,name,title,description,url,urlToImage,publishedAt)
-
-    return article_object'''

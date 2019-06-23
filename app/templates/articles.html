@@ -1,22 +1,29 @@
+
 {% extends 'base.html'%}
-<!-- Content block -->
-{% block content %}
-<div class="container">
-
-    <!-- Poster background -->
-    <div class="row">
-        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 urlToImage" style="background: url({{article.urlToImage}}) no-repeat center center">
+{% import 'macros.html' as macro%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        {% if title %}
+        <title> {{ title }}</title>
+        {% else %}
+        <title> all news around the globe </title>
+        {% endif %}
+    </head>
+    <body>
+       <!-- Content block -->
+        {% block content %}
+        <center><h1> ARTICLES </h1></center>
+        <div class ="container">
+            <div class ="row>"
+                <!-- sources -->
+                <p>
+                {{ macro.displayArticleList(articles)}}
+                </p>
+            </div>
         </div>
 
-        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 movie-details">
-            <h3>{{ articles.title }}</h3>
-
-            <p class="description"> {{ articles.description }}</p>
-            <p class="publishedAt">{{ articles.publishedAt }}</p>
-
-
-        </div>
-    </div>
-
-</div>
 {% endblock %}
+    </body>
+</html>
