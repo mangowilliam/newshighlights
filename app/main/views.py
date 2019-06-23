@@ -19,7 +19,7 @@ def index():
 @main.route('/articles/<source_name>')
 def articles(source_name):
     '''
-    View movie page function that returns the movie details page and its data
+    View articles page function that returns the top articles page and its data
     '''
     title = f"{source_name}"
     articles = get_articles(source_name)

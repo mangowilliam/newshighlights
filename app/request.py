@@ -46,10 +46,10 @@ def process_results(sources_list):
     Function  that processes the source result and transform them to a list of Objects
 
     Args:
-        source_list: A list of dictionaries that contain movie details
+        source_list: A list of dictionaries that contain sources
 
     Returns :
-        source_results: A list of movie objects
+        source_results: A list of source objects
     '''
     source_results = []
     for source_item in sources_list:
@@ -86,13 +86,13 @@ def get_articles(id):
 
 def process_articles(articles_list):
     '''
-    Function  that processes the source result and transform them to a list of Objects
+    Function  that processes the article result and transform them to a list of Objects
 
     Args:
-        source_list: A list of dictionaries that contain movie details
+    articles_list: A list of dictionaries that contain aricle objects
 
     Returns :
-        source_results: A list of movie objects
+        articles_results: A list of articles objects
     '''
     articles_results = []
 
