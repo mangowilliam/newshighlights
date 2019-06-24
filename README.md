@@ -23,7 +23,7 @@ by clicking on the image of the highlight the user can read the news on the webs
 * Python3.6
 ## Setup/Installation Requirements
 * internet access
-* git clone https://github.com/mangowilliam/Password.git
+* git clone https://github.com/mangowilliam/newshighlights.git
 * $ cd news-highlights
 * $ python3.6 -m venv virtual (install virtual environment)
 * $ source virtual/bin/activate
@@ -43,7 +43,7 @@ html
 ## Support and contact details
 contact williammango2015@gmail.com for any kind of support.
 ## Live Link
-https://github.com/mangowilliam/Password
+https://github.com/mangowilliam/newshighlights
 
 ### License
 
