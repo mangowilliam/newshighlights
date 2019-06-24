@@ -15,9 +15,9 @@ by clicking on the image of the highlight the user can read the news on the webs
 ## BDD
 | Behavior           | Input                 | Outcome                            |
 | -------------------|-----------------------| -----------------------------------|
-| request page       | horuku link url       | news sources                       |
+| request page       | click horuku link url | news sources                       |
 | request highlights | click on source name  | news highlights/articles           |
-| request article    | click on article url  | read article on the web            |
+| request article    | click on article image| read article on the web            |
 
 ## Prerequisites
 * Python3.6
@@ -30,6 +30,7 @@ by clicking on the image of the highlight the user can read the news on the webs
 * $ python3.6 -m pip install -r requirements.txt (install all dependencies)
 * Inside the manage.py module change the config_name parameter from 'production' to 'development' ie app = * create_app('production') should be app = create_app('development')
 * $ ./start.sh
+* or click on this link and follow the steps in the BDD https://newsmang.herokuapp.com/ 
 ## Known Bugs
 
 No known bugs
